@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import style from "./styles/TreeMap.module.scss";
 import citiesData from "../../../data/citiesData.json";
+import citiesData2States from "../../../data/citiesData2States.json";
 
 export interface TreeMapProps {
   prop?: string;
@@ -17,19 +18,33 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
 
   useEffect(() => {
     if (selectedNode) {
+      // Make a copy of data's children array elements
       let statefulData = [...statefulCitiesData.children];
 
-      const selectedCity = statefulData.find((a) => a.id == selectedNode.id);
+      // Find selected node/city
+      const selectedState = statefulData.find(
+        (a) => a.id === selectedNode.pathComponents[1]
+      );
+      const selectedCity = selectedState?.children.find(
+        (a) => a.id == selectedNode.id
+      );
+      console.log(selectedNode);
+
+      // Set colour of selected node into state
       const prevColour = selectedCity.labelIdColor;
       setSelectedNodesPrevColour(prevColour);
 
+      // Check if selected city's colour is the highlighted colour
       if (selectedCity.labelIdColor === selectedNodesColour) {
+        // If so, its already been selected so flip its colour back
         selectedCity.labelIdColor = selectedNodesPrevColour;
         setSelectedNode(null);
       } else {
+        // Otherwise set it to highlighted colour
         selectedCity.labelIdColor = selectedNodesColour;
       }
 
+      // Set updated data/colour into our stateful copy
       setStatefulCitiesData({
         ...statefulCitiesData,
         statefulData,
@@ -38,6 +53,7 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
   }, [selectedNode]);
 
   const handleClick = (node) => {
+    // If previous selectedNode and current selection are the same -> then perfor actions.
     if (!selectedNode || selectedNode?.id == node?.id) {
       setSelectedNode(node);
     }
@@ -50,21 +66,26 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
       <ResponsiveTreeMap
         data={statefulCitiesData}
         valueFormat=".2s"
-        leavesOnly
         margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
         label="id"
-        labelSkipSize={18}
+        labelSkipSize={10}
         labelTextColor={"#fff"}
         orientLabel={false}
-        colorBy="id"
         borderColor={"#fff"}
         colors={(obj: any): string => {
           return String(obj.data.labelIdColor);
         }}
         nodeOpacity={0.9}
         onClick={handleClick}
+        enableParentLabel
+        parentLabel={(obj: any): string => {
+          return obj.pathComponents[1];
+        }}
+        parentLabelPosition="bottom"
+        parentLabelTextColor="#000"
+        parentLabelPadding={25}
+        parentLabelSize={30}
       />
-      <div className={style.mapTitle}>Alabama</div>
       <div className={style.selection}>Selected City: {selectedNode?.id}</div>
     </div>
   );

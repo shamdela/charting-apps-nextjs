@@ -57,6 +57,27 @@
           "labelIdColor": "#F8EDED"
         }
       ]
+    },
+    {
+      "id": "Georgia",
+      "labelIdColor": "rgb(255, 255, 255)",
+      "children": [
+        {
+          "id": "Atlanta",
+          "value": 10000,
+          "labelIdColor": "#FF8C00"
+        },
+        {
+          "id": "Augusta",
+          "value": 8000,
+          "labelIdColor": "#FFBF00"
+        },
+        {
+          "id": "Savannah",
+          "value": 6000,
+          "labelIdColor": "#FF7F50"
+        }
+      ]
     }
   ]
 }

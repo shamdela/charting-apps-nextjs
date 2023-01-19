@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link';
-import Stream from "../src/nivo/components/Stream";
 import TreeMap from "../src/nivo/components/TreeMap"
 
 import styles from '../styles/Home.module.css';
