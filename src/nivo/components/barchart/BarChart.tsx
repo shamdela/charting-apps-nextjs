@@ -12,23 +12,21 @@ export interface BarChartProps {
 function BarChart({ prop = "default value" }: BarChartProps) {
   const [isPrescriberSelected, setIsPrescriberSelected] = useState(false);
   const [selectedPrescriber, setSelectedPrescriber] = useState(-1);
-  const [statefulBarChartData, setStatefulBarChartData] =
-    useState(barChartData);
-  const [selectedNodesPrevColour, setSelectedNodesPrevColour] = useState("");
+  const [statefulBarChartData, setStatefulBarChartData] = useState(barChartData);
 
-  useEffect(() => {
+   useEffect(() => {
     // Make a copy of data's children array elements
-    let statefulData = [...statefulBarChartData];
+    let statefulData = {...statefulBarChartData};
+
+    !isPrescriberSelected && setSelectedPrescriber(-1);
     
-    console.log("selectedPrescriber with index:", selectedPrescriber);
-    console.log("Is a Prescriber Selected:", isPrescriberSelected)
-    
-  }, [isPrescriberSelected, selectedPrescriber]);
+  }, [isPrescriberSelected, selectedPrescriber]); 
 
   const handleClick = (node, event) => {      
     const nodeSelected = node.index;
     if (nodeSelected === selectedPrescriber){
         setIsPrescriberSelected(() => !isPrescriberSelected)
+        setSelectedPrescriber(-1)
     } else {
         setIsPrescriberSelected(() => true)
     }
