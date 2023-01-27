@@ -2,8 +2,8 @@ import { ResponsiveTreeMap } from "@nivo/treemap";
 import React, { useEffect, useState } from "react";
 
 import style from "./styles/TreeMap.module.scss";
-import citiesData from "../../../data/citiesData.json";
-import citiesData2States from "../../../data/citiesData2States.json";
+import citiesData from "../../../../data/citiesData.json";
+import citiesData2States from "../../../../data/citiesData2States.json";
 
 export interface TreeMapProps {
   prop?: string;
@@ -13,7 +13,7 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
   const selectedNodesColour = "#900C3F";
 
   const [selectedNode, setSelectedNode] = useState(null);
-  const [statefulCitiesData, setStatefulCitiesData] = useState(citiesData);
+  const [statefulCitiesData, setStatefulCitiesData] = useState(citiesData2States);
   const [selectedNodesPrevColour, setSelectedNodesPrevColour] = useState("");
 
   useEffect(() => {
@@ -28,7 +28,6 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
       const selectedCity = selectedState?.children.find(
         (a) => a.id == selectedNode.id
       );
-      console.log(selectedNode);
 
       // Set colour of selected node into state
       const prevColour = selectedCity.labelIdColor;
