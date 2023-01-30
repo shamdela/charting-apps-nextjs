@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import style from "./styles/BarChart.module.scss";
 
 import barChartData from "../../../../data/barChartData.json";
+import { convertToRGBA } from "../../../utilities/utilityFunctions";
 
 export interface BarChartProps {
   prop?: string;
@@ -55,14 +56,16 @@ function BarChart({ prop = "default value" }: BarChartProps) {
         indexScale={{ type: "band", round: true }}
         //colors={{ scheme: 'nivo' }}
         colors={(obj: any): string => {           
+            const rgbColour = String(obj.data[`${obj.id}Color`])            
             if (isPrescriberSelected){
                 if (selectedPrescriber === obj.index){
-                    return String(obj.data[`${obj.id}Color`]);    
+                    return rgbColour;    
                 } else {
-                    return String(obj.data[`${obj.id}OpaqueColor`]);    
+                    // Grey out unselected bar, so call function to add opacity to the colour                    
+                    return convertToRGBA(rgbColour, 0.5);    
                 }
             }
-            return String(obj.data[`${obj.id}Color`]);
+            return rgbColour;
         }}
         borderColor={{
           from: "color",
@@ -105,7 +108,11 @@ function BarChart({ prop = "default value" }: BarChartProps) {
             ],
           },
         ]}
-        role="application"
+        role="img"
+        ariaLabel="Prescibers Bar Chart"
+        barAriaLabel={(obj) => {            
+            return `${obj.indexValue}, Drug: ${obj.id}, Value: ${obj.value}`;
+        }}
         onClick={handleClick}
       />
       <div className={style.selection}>
