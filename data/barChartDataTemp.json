@@ -1,0 +1,247 @@
+[
+  {
+    "prescriber": "Prescriber 7",
+    "data": [
+      {
+        "label": "Humira",
+        "labelValue": 128,
+        "labelColor": "rgb(180,68,67)"
+      },
+      {
+        "label": "Stelara",
+        "labelValue": 100,
+        "labelColor": "rgb(214,151,57)"
+      },
+      {
+        "label": "Ozempic",
+        "labelValue": 68,
+        "labelColor": "rgb(72,86,42)"
+      },
+      {
+        "label": "Trulicity",
+        "labelValue": 172,
+        "labelColor": "rgb(228,129,59)"
+      },
+      {
+        "label": "Jardiance",
+        "labelValue": 49,
+        "labelColor": "rgb(120,179,240)"
+      },
+      {
+        "label": "Dupixent",
+        "labelValue": 18,
+        "labelColor": "rgb(79,155,143)"
+      }
+    ]
+  },
+  {
+    "prescriber": "Prescriber 6",
+    "data": [
+      {
+        "label": "Humira",
+        "labelValue": 102,
+        "labelColor": "rgb(180,68,67)"
+      },
+      {
+        "label": "Stelara",
+        "labelValue": 130,
+        "labelColor": "rgb(214,151,57)"
+      },
+      {
+        "label": "Ozempic",
+        "labelValue": 116,
+        "labelColor": "rgb(72,86,42)"
+      },
+      {
+        "label": "Trulicity",
+        "labelValue": 104,
+        "labelColor": "rgb(228,129,59)"
+      },
+      {
+        "label": "Jardiance",
+        "labelValue": 80,
+        "labelColor": "rgb(120,179,240)"
+      },
+      {
+        "label": "Dupixent",
+        "labelValue": 100,
+        "labelColor": "rgb(79,155,143)"
+      }
+    ]
+  },
+  {
+    "prescriber": "Prescriber 5",
+    "data": [
+      {
+        "label": "Humira",
+        "labelValue": 177,
+        "labelColor": "rgb(180,68,67)"
+      },
+      {
+        "label": "Stelara",
+        "labelValue": 130,
+        "labelColor": "rgb(214,151,57)"
+      },
+      {
+        "label": "Ozempic",
+        "labelValue": 120,
+        "labelColor": "rgb(72,86,42)"
+      },
+      {
+        "label": "Trulicity",
+        "labelValue": 100,
+        "labelColor": "rgb(228,129,59)"
+      },
+      {
+        "label": "Jardiance",
+        "labelValue": 120,
+        "labelColor": "rgb(120,179,240)"
+      },
+      {
+        "label": "Dupixent",
+        "labelValue": 104,
+        "labelColor": "rgb(79,155,143)"
+      }
+    ]
+  },
+  {
+    "prescriber": "Prescriber 4",
+    "data": [
+      {
+        "label": "Humira",
+        "labelValue": 151,
+        "labelColor": "rgb(180,68,67)"
+      },
+      {
+        "label": "Stelara",
+        "labelValue": 115,
+        "labelColor": "rgb(214,151,57)"
+      },
+      {
+        "label": "Ozempic",
+        "labelValue": 156,
+        "labelColor": "rgb(72,86,42)"
+      },
+      {
+        "label": "Trulicity",
+        "labelValue": 163,
+        "labelColor": "rgb(228,129,59)"
+      },
+      {
+        "label": "Jardiance",
+        "labelValue": 81,
+        "labelColor": "rgb(120,179,240)"
+      },
+      {
+        "label": "Dupixent",
+        "labelValue": 181,
+        "labelColor": "rgb(79,155,143)"
+      }
+    ]
+  },
+  {
+    "prescriber": "Prescriber 3",
+    "data": [
+      {
+        "label": "Humira",
+        "labelValue": 192,
+        "labelColor": "rgb(180,68,67)"
+      },
+      {
+        "label": "Stelara",
+        "labelValue": 159,
+        "labelColor": "rgb(214,151,57)"
+      },
+      {
+        "label": "Ozempic",
+        "labelValue": 154,
+        "labelColor": "rgb(72,86,42)"
+      },
+      {
+        "label": "Trulicity",
+        "labelValue": 135,
+        "labelColor": "rgb(228,129,59)"
+      },
+      {
+        "label": "Jardiance",
+        "labelValue": 139,
+        "labelColor": "rgb(120,179,240)"
+      },
+      {
+        "label": "Dupixent",
+        "labelValue": 120,
+        "labelColor": "rgb(79,155,143)"
+      }
+    ]
+  },
+  {
+    "prescriber": "Prescriber 2",
+    "data": [
+      {
+        "label": "Humira",
+        "labelValue": 200,
+        "labelColor": "rgb(180,68,67)"
+      },
+      {
+        "label": "Stelara",
+        "labelValue": 197,
+        "labelColor": "rgb(214,151,57)"
+      },
+      {
+        "label": "Ozempic",
+        "labelValue": 159,
+        "labelColor": "rgb(72,86,42)"
+      },
+      {
+        "label": "Trulicity",
+        "labelValue": 144,
+        "labelColor": "rgb(228,129,59)"
+      },
+      {
+        "label": "Jardiance",
+        "labelValue": 184,
+        "labelColor": "rgb(120,179,240)"
+      },
+      {
+        "label": "Dupixent",
+        "labelValue": 79,
+        "labelColor": "rgb(79,155,143)"
+      }
+    ]
+  },
+  {
+    "prescriber": "Prescriber 1",
+    "data": [
+      {
+        "label": "Humira",
+        "labelValue": 163,
+        "labelColor": "rgb(180,68,67)"
+      },
+      {
+        "label": "Stelara",
+        "labelValue": 195,
+        "labelColor": "rgb(214,151,57)"
+      },
+      {
+        "label": "Ozempic",
+        "labelValue": 178,
+        "labelColor": "rgb(72,86,42)"
+      },
+      {
+        "label": "Trulicity",
+        "labelValue": 187,
+        "labelColor": "rgb(228,129,59)"
+      },
+      {
+        "label": "Jardiance",
+        "labelValue": 178,
+        "labelColor": "rgb(120,179,240)"
+      },
+      {
+        "label": "Dupixent",
+        "labelValue": 143,
+        "labelColor": "rgb(79,155,143)"
+      }
+    ]
+  }
+]

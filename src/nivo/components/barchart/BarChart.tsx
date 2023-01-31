@@ -7,29 +7,29 @@ import barChartData from "../../../../data/barChartData.json";
 import { convertToRGBA } from "../../../utilities/utilityFunctions";
 
 export interface BarChartProps {
-  prop?: string;
+  selectedPrescriber: number;
+  setSelectedPrescriber: (num: number) => void;
 }
 
-function BarChart({ prop = "default value" }: BarChartProps) {
+function BarChart({ selectedPrescriber, setSelectedPrescriber }: BarChartProps) {
   const [isPrescriberSelected, setIsPrescriberSelected] = useState(false);
-  const [selectedPrescriber, setSelectedPrescriber] = useState(-1);
-  const [statefulBarChartData, setStatefulBarChartData] = useState(barChartData);
+  const [statefulBarChartData, setStatefulBarChartData] =
+    useState(barChartData);
 
-   useEffect(() => {
+  useEffect(() => {
     // Make a copy of data's children array elements
-    let statefulData = {...statefulBarChartData};
+    let statefulData = { ...statefulBarChartData };
 
     !isPrescriberSelected && setSelectedPrescriber(-1);
-    
-  }, [isPrescriberSelected, selectedPrescriber]); 
+  }, [isPrescriberSelected, selectedPrescriber]);
 
-  const handleClick = (node, event) => {      
+  const handleClick = (node, event) => {
     const nodeSelected = node.index;
-    if (nodeSelected === selectedPrescriber){
-        setIsPrescriberSelected(() => !isPrescriberSelected)
-        setSelectedPrescriber(-1)
+    if (nodeSelected === selectedPrescriber) {
+      setIsPrescriberSelected(() => !isPrescriberSelected);
+      setSelectedPrescriber(-1);
     } else {
-        setIsPrescriberSelected(() => true)
+      setIsPrescriberSelected(() => true);
     }
     setSelectedPrescriber(nodeSelected);
   };
@@ -55,17 +55,17 @@ function BarChart({ prop = "default value" }: BarChartProps) {
         valueScale={{ type: "linear" }}
         indexScale={{ type: "band", round: true }}
         //colors={{ scheme: 'nivo' }}
-        colors={(obj: any): string => {           
-            const rgbColour = String(obj.data[`${obj.id}Color`])            
-            if (isPrescriberSelected){
-                if (selectedPrescriber === obj.index){
-                    return rgbColour;    
-                } else {
-                    // Grey out unselected bar, so call function to add opacity to the colour                    
-                    return convertToRGBA(rgbColour, 0.5);    
-                }
+        colors={(obj: any): string => {
+          const rgbColour = String(obj.data[`${obj.id}Color`]);
+          if (isPrescriberSelected) {
+            if (selectedPrescriber === obj.index) {
+              return rgbColour;
+            } else {
+              // Grey out unselected bar, so call function to add opacity to the colour
+              return convertToRGBA(rgbColour, 0.5);
             }
-            return rgbColour;
+          }
+          return rgbColour;
         }}
         borderColor={{
           from: "color",
@@ -110,8 +110,8 @@ function BarChart({ prop = "default value" }: BarChartProps) {
         ]}
         role="img"
         ariaLabel="Prescibers Bar Chart"
-        barAriaLabel={(obj) => {            
-            return `${obj.indexValue}, Drug: ${obj.id}, Value: ${obj.value}`;
+        barAriaLabel={(obj) => {
+          return `${obj.indexValue}, Drug: ${obj.id}, Value: ${obj.value}`;
         }}
         onClick={handleClick}
       />
@@ -120,7 +120,8 @@ function BarChart({ prop = "default value" }: BarChartProps) {
         <span className={style.selectionValue}>
           {selectedPrescriber >= 0 &&
             statefulBarChartData[selectedPrescriber].prescriber}
-        </span>
+        </span>       
+        
       </div>
     </div>
   );
