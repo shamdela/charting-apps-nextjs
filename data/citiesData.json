@@ -1,62 +1,57 @@
 {
   "id": "root",
   "labelIdColor": "rgb(255, 255, 255)",
+
   "children": [
     {
-      "id": "Alabama",
-      "labelIdColor": "rgb(255, 255, 255)",
-      "children": [
-        {
-          "id": "Auburn",
-          "value": 10000,
-          "labelIdColor": "#B44343"
-        },
-        {
-          "id": "Mooresville",
-          "value": 8000,
-          "labelIdColor": "#B95655"
-        },
-        {
-          "id": "Fairhope",
-          "value": 5500,
-          "labelIdColor": "#C36969"
-        },
-        {
-          "id": "Montgomery",
-          "value": 4000,
-          "labelIdColor": "#CA7C7B"
-        },
-        {
-          "id": "Mobile",
-          "value": 3300,
-          "labelIdColor": "#A97372"
-        },
-        {
-          "id": "Huntsville",
-          "value": 1550,
-          "labelIdColor": "#D9A1A0"
-        },
-        {
-          "id": "Birmingham",
-          "value": 750,
-          "labelIdColor": "#E1B4B4"
-        },
-        {
-          "id": "Hoover",
-          "value": 500,
-          "labelIdColor": "#E8C6C6"
-        },
-        {
-          "id": "Dothan",
-          "value": 350,
-          "labelIdColor": "#F0DAD9"
-        },
-        {
-          "id": "Foley",
-          "value": 300,
-          "labelIdColor": "#F8EDED"
-        }
-      ]
+      "id": "Auburn",
+      "value": 10000,
+      "labelIdColor": "#B44343"
+    },
+    {
+      "id": "Mooresville",
+      "value": 8000,
+      "labelIdColor": "#B95655"
+    },
+    {
+      "id": "Fairhope",
+      "value": 5500,
+      "labelIdColor": "#C36969"
+    },
+    {
+      "id": "Montgomery",
+      "value": 4000,
+      "labelIdColor": "#CA7C7B"
+    },
+    {
+      "id": "Mobile",
+      "value": 3300,
+      "labelIdColor": "#A97372"
+    },
+    {
+      "id": "Huntsville",
+      "value": 1550,
+      "labelIdColor": "#D9A1A0"
+    },
+    {
+      "id": "Birmingham",
+      "value": 750,
+      "labelIdColor": "#E1B4B4"
+    },
+    {
+      "id": "Hoover Hoover",
+      "value": 500,
+      "labelIdColor": "#E8C6C6"
+    },
+    {
+      "id": "Dothan Dothan Dothan",
+      "value": 350,
+      "labelIdColor": "#F0DAD9"
+    },
+    {
+      "id": "Foley Foley Foley",
+      "value": 300,
+      "labelIdColor": "#F8EDED"
     }
   ]
 }

@@ -13,7 +13,8 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
   const selectedNodesColour = "#900C3F";
 
   const [selectedNode, setSelectedNode] = useState(null);
-  const [statefulCitiesData, setStatefulCitiesData] = useState(citiesData2States);
+  const [statefulCitiesData, setStatefulCitiesData] =
+    useState(citiesData2States);
   const [selectedNodesPrevColour, setSelectedNodesPrevColour] = useState("");
 
   useEffect(() => {
@@ -51,7 +52,7 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
     }
   }, [selectedNode]);
 
-  const handleClick = (node) => {
+  const handleClick = (node: { id: any }) => {
     // If previous selectedNode and current selection are the same -> then perfor actions.
     if (!selectedNode || selectedNode?.id == node?.id) {
       setSelectedNode(node);
@@ -76,10 +77,10 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
         }}
         nodeOpacity={0.9}
         onClick={handleClick}
-        enableParentLabel
-        parentLabel={(obj: any): string => {
+        /*         parentLabel={(obj: any): string => {
           return obj.pathComponents[1];
-        }}
+        }} */
+        parentLabel="id"
         parentLabelPosition="bottom"
         parentLabelTextColor="#000"
         parentLabelPadding={25}

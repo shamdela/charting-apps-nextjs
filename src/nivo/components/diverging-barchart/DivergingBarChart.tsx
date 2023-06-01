@@ -1,27 +1,27 @@
 import { ResponsiveBar } from "@nivo/bar";
 import React, { useEffect, useState } from "react";
 
-import style from "./styles/BarChart.module.scss";
+import style from "./styles/DivergingBarChart.module.scss";
 
-import barChartData from "../../../../data/barChartData.json";
+import divergingBarChartData from "../../../../data/divergingBarChartData.json";
 import { convertToRGBA } from "../../../utilities/utilityFunctions";
 
-export interface BarChartProps {
+export interface DivergingBarChartProps {
   selectedPrescriber: number;
   setSelectedPrescriber: (num: number) => void;
 }
 
-function BarChart({
+function DivergingBarChart({
   selectedPrescriber,
   setSelectedPrescriber,
-}: BarChartProps) {
+}: DivergingBarChartProps) {
   const [isPrescriberSelected, setIsPrescriberSelected] = useState(false);
-  const [statefulBarChartData, setStatefulBarChartData] =
-    useState(barChartData);
+  const [statefulDivergingBarChartData, setStatefulDivergingBarChartData] =
+    useState(divergingBarChartData);
 
   useEffect(() => {
     // Make a copy of data's children array elements
-    let statefulData = { ...statefulBarChartData };
+    let statefulData = { ...statefulDivergingBarChartData };
 
     !isPrescriberSelected && setSelectedPrescriber(-1);
   }, [isPrescriberSelected, selectedPrescriber]);
@@ -38,11 +38,11 @@ function BarChart({
   };
 
   return (
-    <div className={style.nivoBarChartHeight}>
-      <h2>Stacked Bar Chart</h2>
+    <div className={style.nivoDivergingBarChartHeight}>
+      <h2>Diverging Stacked Bar Chart</h2>
       <p>Representing prescriber by drugs</p>
       <ResponsiveBar
-        data={statefulBarChartData}
+        data={statefulDivergingBarChartData}
         keys={[
           "Humira",
           "Stelara",
@@ -50,11 +50,18 @@ function BarChart({
           "Trulicity",
           "Jardiance",
           "Dupixent",
+          "HumiraNeg",
+          "StelaraNeg",
+          "OzempicNeg",
+          "TrulicityNeg",
+          "JardianceNeg",
+          "DupixentNeg",
         ]}
         indexBy="prescriber"
         margin={{ top: 30, right: 130, bottom: 90, left: 80 }}
         padding={0.4}
         layout="horizontal"
+        //reverse
         valueScale={{ type: "linear" }}
         indexScale={{ type: "band", round: true }}
         //colors={{ scheme: 'nivo' }}
@@ -87,6 +94,16 @@ function BarChart({
           tickRotation: 0,
         }}
         enableLabel={false}
+        markers={[
+          {
+            axis: "x",
+            value: 0,
+            lineStyle: {
+              stroke: "rgba(0, 0, 0, .35)",
+              strokeWidth: 2,
+            },
+          },
+        ]}
         legends={[
           {
             dataFrom: "keys",
@@ -129,4 +146,4 @@ function BarChart({
   );
 }
 
-export default BarChart;
+export default DivergingBarChart;
