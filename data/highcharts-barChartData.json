@@ -1,0 +1,28 @@
+[
+  {
+    "prescriber": "McDonald",
+    "data": [
+      {
+        "Humira": 128,
+        "Stelara": 100,
+        "Ozempic": 68,
+        "Trulicity": 172,
+        "Jardiance": 49,
+        "Dupixent": 18
+      }
+    ]
+  },
+  {
+    "prescriber": "Barry",
+    "data": [
+      {
+        "Humira": 102,
+        "Stelara": 130,
+        "Ozempic": 116,
+        "Trulicity": 104,
+        "Jardiance": 80,
+        "Dupixent": 100
+      }
+    ]
+  }
+]

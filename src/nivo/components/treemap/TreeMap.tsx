@@ -13,8 +13,7 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
   const selectedNodesColour = "#900C3F";
 
   const [selectedNode, setSelectedNode] = useState(null);
-  const [statefulCitiesData, setStatefulCitiesData] =
-    useState(citiesData2States);
+  const [statefulCitiesData, setStatefulCitiesData] = useState(citiesData);
   const [selectedNodesPrevColour, setSelectedNodesPrevColour] = useState("");
 
   useEffect(() => {
@@ -26,9 +25,13 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
       const selectedState = statefulData.find(
         (a) => a.id === selectedNode.pathComponents[1]
       );
-      const selectedCity = selectedState?.children.find(
+
+      // Uncomment line below for when using 2 state data
+      /*const selectedCity = selectedState?.children.find(
         (a) => a.id == selectedNode.id
-      );
+      );*/
+      // Comment out line below for when using 2 state data
+      const selectedCity = selectedState;
 
       // Set colour of selected node into state
       const prevColour = selectedCity.labelIdColor;
@@ -68,7 +71,7 @@ function TreeMap({ prop = "default value" }: TreeMapProps) {
         valueFormat=".2s"
         margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
         label="id"
-        labelSkipSize={10}
+        labelSkipSize={8}
         labelTextColor={"#fff"}
         orientLabel={false}
         borderColor={"#fff"}

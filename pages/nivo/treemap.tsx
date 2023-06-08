@@ -1,10 +1,9 @@
-import Head from "next/head";
 import Link from "next/link";
 
-import Layout from "../src/components/Layout";
-import TreeMap from "../src/nivo/components/treemap/TreeMap";
+import Layout from "../../src/components/Layout";
+import TreeMap from "../../src/nivo/components/treemap/TreeMap";
 
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 
 export default function TreeMapPage() {
   return (

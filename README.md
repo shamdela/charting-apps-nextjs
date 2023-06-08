@@ -1,3 +1,6 @@
-A POC for using the Nivo TreeMap chart - https://nivo.rocks/treemap/
+A set of apps for creating POC's for different charing librarys
 
-Selectable city nodes on the map that highlight when selected and revert back to normal colour when deselected.
+    - Nivo chart - https://nivo.rocks
+    - AM Charts - https://www.amcharts.com/
+
+

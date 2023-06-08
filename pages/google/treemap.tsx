@@ -1,16 +1,14 @@
-import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-import Layout from "../src/components/Layout";
-import BarChart from "../src/nivo/components/barchart/BarChart";
-import SubBarChart from "../src/nivo/components/barchart/SubBarChart";
+import Layout from "../../src/components/Layout";
+import AMTreeMap from "../../src/amcharts/components/am-treemap/AMTreeMap";
 
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 
-import barChartData from "../data/barChartDataTemp.json";
+import barChartData from "../../data/barChartDataTemp.json";
 
-export default function BarChartPage() {
+export default function AMChartsTreeMapPage() {
   const [selectedPrescriber, setSelectedPrescriber] = useState(-1);
   const [selectedPrescriberName, setSelectedPrescriberName] = useState("");
 
@@ -18,9 +16,8 @@ export default function BarChartPage() {
     const prescriberFound = barChartData.find(
       (prescriber, index) => index === selectedPrescriber
     );
-    
-    setSelectedPrescriberName(prescriberFound?.prescriber);
 
+    setSelectedPrescriberName(prescriberFound?.prescriber);
   }, [selectedPrescriber]);
 
   return (
@@ -30,11 +27,10 @@ export default function BarChartPage() {
       </Link>
 
       <div className={styles.grid}>
-        <BarChart
+        <AMTreeMap
           selectedPrescriber={selectedPrescriber}
           setSelectedPrescriber={setSelectedPrescriber}
         />
-        <SubBarChart selectedPrescriberName={selectedPrescriberName} />
       </div>
 
       <style jsx global>{`

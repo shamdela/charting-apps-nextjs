@@ -51,6 +51,7 @@ function BarChart({
           "Jardiance",
           "Dupixent",
         ]}
+        innerPadding={1}
         indexBy="prescriber"
         margin={{ top: 30, right: 130, bottom: 90, left: 80 }}
         padding={0.4}
@@ -87,6 +88,8 @@ function BarChart({
           tickRotation: 0,
         }}
         enableLabel={false}
+        enableGridX
+        enableGridY={false}
         legends={[
           {
             dataFrom: "keys",
@@ -109,6 +112,24 @@ function BarChart({
                 },
               },
             ],
+          },
+        ]}
+        markers={[
+          {
+            axis: "x",
+            value: 0,
+            lineStyle: {
+              stroke: "rgba(160, 160, 160, .35)",
+              strokeWidth: 2,
+            },
+          },
+          {
+            axis: "x",
+            value: 980,
+            lineStyle: {
+              stroke: "rgba(160, 160, 160, .35)",
+              strokeWidth: 2,
+            },
           },
         ]}
         role="img"

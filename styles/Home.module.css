@@ -12,6 +12,10 @@
   justify-content: flex-start;
 }
 
+.heading {
+  text-align: left;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;

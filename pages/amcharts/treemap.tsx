@@ -1,15 +1,14 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-import Layout from "../src/components/Layout";
-import AMBarChart from "../src/amcharts/components/am-barchart/AMBarChart";
-import AMBarChartVertical from "../src/amcharts/components/am-barchart/AMBarChartVertical";
+import Layout from "../../src/components/Layout";
+import AMTreeMap from "../../src/amcharts/components/am-treemap/AMTreeMap";
 
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 
-import barChartData from "../data/barChartDataTemp.json";
+import barChartData from "../../data/barChartDataTemp.json";
 
-export default function AMChartsBarChartPage() {
+export default function AMChartsTreeMapPage() {
   const [selectedPrescriber, setSelectedPrescriber] = useState(-1);
   const [selectedPrescriberName, setSelectedPrescriberName] = useState("");
 
@@ -28,11 +27,7 @@ export default function AMChartsBarChartPage() {
       </Link>
 
       <div className={styles.grid}>
-        <AMBarChart
-          selectedPrescriber={selectedPrescriber}
-          setSelectedPrescriber={setSelectedPrescriber}
-        />
-        <AMBarChartVertical
+        <AMTreeMap
           selectedPrescriber={selectedPrescriber}
           setSelectedPrescriber={setSelectedPrescriber}
         />

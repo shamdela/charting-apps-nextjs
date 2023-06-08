@@ -1,0 +1,57 @@
+{
+  "id": "root",
+  "labelIdColor": "rgb(255, 255, 255)",
+
+  "children": [
+    {
+      "name": "Auburn",
+      "value": 10000,
+      "color": "#4F9B8F"
+    },
+    {
+      "name": "Mooresville",
+      "value": 8000,
+      "color": "#5DA398"
+    },
+    {
+      "name": "Fairhope",
+      "value": 5500,
+      "color": "#6BABA1"
+    },
+    {
+      "name": "Montgomery",
+      "value": 4000,
+      "color": "#79B3AA"
+    },
+    {
+      "name": "Mobile",
+      "value": 3300,
+      "color": "#87BBB3"
+    },
+    {
+      "name": "Huntsville",
+      "value": 1550,
+      "color": "#91C7BC"
+    },
+    {
+      "name": "Birmingham",
+      "value": 750,
+      "color": "#A4CBC5"
+    },
+    {
+      "name": "Hoover Hoover",
+      "value": 500,
+      "color": "#B2D3CE"
+    },
+    {
+      "name": "Dothan Dothan Dothan",
+      "value": 350,
+      "color": "#C0DBD7"
+    },
+    {
+      "name": "Foley Foley Foley",
+      "value": 300,
+      "color": "#CEE3E0"
+    }
+  ]
+}

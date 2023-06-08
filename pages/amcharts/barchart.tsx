@@ -1,15 +1,15 @@
-import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-import Layout from "../src/components/Layout";
-import DivergingBarChart from "../src/nivo/components/diverging-barchart/DivergingBarChart";
+import Layout from "../../src/components/Layout";
+import AMBarChart from "../../src/amcharts/components/am-barchart/AMBarChart";
+import AMBarChartVertical from "../../src/amcharts/components/am-barchart/AMBarChartVertical";
 
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 
-import barChartData from "../data/barChartDataTemp.json";
+import barChartData from "../../data/barChartDataTemp.json";
 
-export default function DivergingBarChartPage() {
+export default function AMChartsBarChartPage() {
   const [selectedPrescriber, setSelectedPrescriber] = useState(-1);
   const [selectedPrescriberName, setSelectedPrescriberName] = useState("");
 
@@ -28,7 +28,11 @@ export default function DivergingBarChartPage() {
       </Link>
 
       <div className={styles.grid}>
-        <DivergingBarChart
+        <AMBarChart
+          selectedPrescriber={selectedPrescriber}
+          setSelectedPrescriber={setSelectedPrescriber}
+        />
+        <AMBarChartVertical
           selectedPrescriber={selectedPrescriber}
           setSelectedPrescriber={setSelectedPrescriber}
         />
