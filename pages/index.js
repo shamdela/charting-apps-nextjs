@@ -31,6 +31,14 @@ export default function Home() {
             will check if we can select a full bar and highlight it.
           </p>
         </Link>
+
+        <Link href="/nivo/linechart" className={styles.card}>
+          <h3>Responsive Line Chart &rarr;</h3>
+          <p>
+            A POC for a Line Chart chart from the Nivo library. Representing
+            drug sales per month.
+          </p>
+        </Link>
       </div>
       <h1 className={styles.heading}>AM Charts</h1>
       <div className={styles.grid}>
