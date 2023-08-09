@@ -9,7 +9,7 @@
     "@amcharts/amcharts5": "^5.3.12",
     "@nivo/bar": "^0.80.0",
     "@nivo/core": "^0.80.0",
-    "@nivo/line": "^0.83.0",
+    "@nivo/line": "^0.80.0",
     "@nivo/treemap": "^0.80.0",
     "eslint": "^8.31.0",
     "highcharts": "^11.0.1",
@@ -20,6 +20,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-google-charts": "^4.0.0",
+    "recharts": "^2.7.2",
     "sass": "^1.57.1"
   },
   "devDependencies": {

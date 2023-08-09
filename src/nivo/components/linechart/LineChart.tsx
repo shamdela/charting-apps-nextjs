@@ -17,9 +17,13 @@ function LineChart({ prop = "default value" }: LineChartProps) {
     <div className={style.nivoLineChartHeight}>
       <h2>Responsive LineChart</h2>
       <p>Representing drug sales per month</p>
+      <div className={style.tierChange}>
+        <img src="/tier-change.svg" alt="Tier change" className={style.logo} />
+        <p className={style.tierChangeText}>TIER CHANGE</p>
+      </div>
       <ResponsiveLine
         data={lineData}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{ top: 25, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: "point" }}
         yScale={{
           type: "linear",
@@ -56,14 +60,15 @@ function LineChart({ prop = "default value" }: LineChartProps) {
         pointSymbol={(data) => {
           if (data.datum.specialEvent) {
             return (
-              <rect
+              /* <rect
                 width={11}
                 height={11}
                 fill={data.color}
                 stroke={data.color}
                 x={-5}
                 y={-5}
-              />
+              /> */
+              <circle r={7} fill="white" stroke="black" stroke-width="2.5" />
             );
           } else {
             return <circle r={5} fill={data.color} stroke={data.color} />;

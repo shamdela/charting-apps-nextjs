@@ -40,6 +40,31 @@ export default function Home() {
           </p>
         </Link>
       </div>
+
+      <h1 className={styles.heading}>Recharts</h1>
+      <div className={styles.grid}>
+        <Link href="/recharts/barchart" className={styles.card}>
+          <h3>Recharts BarChart &rarr;</h3>
+          <p>
+            A POC for a BarChart chart from the Recharts library. This will
+            check if we can select a full bar and highlight it.
+          </p>
+        </Link>
+
+        <Link href="/recharts/treemap" className={styles.card}>
+          <h3>Recharts TreeMap &rarr;</h3>
+          <p>
+            A POC for a TreeMap Chart chart from the Recharts library. This will
+            check if we can select a tree node.
+          </p>
+        </Link>
+
+        <Link href="/recharts/linechart" className={styles.card}>
+          <h3>Recharts Linechart &rarr;</h3>
+          <p>A POC for a LineChart chart from the Recharts library.</p>
+        </Link>
+      </div>
+
       <h1 className={styles.heading}>AM Charts</h1>
       <div className={styles.grid}>
         <Link href="/amcharts/barchart" className={styles.card}>

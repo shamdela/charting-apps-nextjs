@@ -1,8 +1,9 @@
-.nivoLineChart {
+.rechartsBar {
   &Height {
-    height: 35rem;
+    height: 40rem;
     width: 65rem;
-    margin: 2rem 0;
+    margin: 1rem;
+    margin-bottom: 10rem;
   }
 
   &LegendContainer {
@@ -42,17 +43,14 @@
 }
 
 .selection {
-  padding-top: 2rem;
+  margin-top: 6rem;
+  .selectionValue {
+    font-weight: bold;
+    padding-left: 1rem;
+  }
 }
 
-.tierChange {
-  display: inline-flex;
-  float: right;
-  margin-right: 7rem;
-  &Text {
-    display: "inline-block";
-    padding-left: 1rem;
-    font-weight: bold;
-    font-size: 14px;
-  }
+.customToolTip {
+  background-color: white;
+  color: red;
 }
