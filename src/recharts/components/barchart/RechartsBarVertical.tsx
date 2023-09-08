@@ -51,10 +51,6 @@ function preProcessData(data) {
 
 const CustomTooltip = ({ active = true, payload = [], label = "" }) => {
   if (active && payload && payload.length) {
-    console.log("active", active);
-    console.log("payload", payload);
-    console.log("label", label);
-    console.log("tooltip", tooltip);
     return (
       <div className={style.customTooltip}>
         <p className="label">{`${label}`}</p>

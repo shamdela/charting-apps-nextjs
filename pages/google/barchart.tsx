@@ -7,6 +7,7 @@ import GoogleBarChart from "../../src/google/components/barchart/GoogleBarChart"
 import styles from "../../styles/Home.module.css";
 
 import barChartData from "../../data/barChartDataTemp.json";
+import GoogleColumnChart from "../../src/google/components/barchart/GoogleColumnChart";
 
 export default function GoogleChartsBarChartPage() {
   const [selectedPrescriber, setSelectedPrescriber] = useState(-1);
@@ -28,6 +29,7 @@ export default function GoogleChartsBarChartPage() {
 
       <div className={styles.grid}>
         <GoogleBarChart selectedPrescriber={selectedPrescriber} />
+        <GoogleColumnChart selectedPrescriber={selectedPrescriber} />
       </div>
 
       <style jsx global>{`

@@ -6,7 +6,7 @@ import Layout from "../../src/components/Layout";
 import styles from "../../styles/Home.module.css";
 
 import barChartData from "../../data/barChartDataTemp.json";
-import GoogleTreeMap from "../../src/google/components/treemap/GoogleTreeMap";
+import GoogleLineChart from "../../src/google/components/linechart/GoogleLineChart";
 
 export default function AMChartsTreeMapPage() {
   const [selectedPrescriber, setSelectedPrescriber] = useState(-1);
@@ -27,7 +27,7 @@ export default function AMChartsTreeMapPage() {
       </Link>
 
       <div className={styles.grid}>
-        <GoogleTreeMap />
+        <GoogleLineChart />
       </div>
 
       <style jsx global>{`

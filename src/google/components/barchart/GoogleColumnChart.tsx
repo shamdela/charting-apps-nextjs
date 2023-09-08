@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
 
-import style from "./styles/GoogleBarChart.module.scss";
+import style from "./styles/GoogleColumnChart.module.scss";
 
 import barChartData from "../../../../barChartData.json";
 
-export interface GoogleBarChartProps {
+export interface GoogleColumnChartProps {
   selectedPrescriber: number;
 }
 
@@ -59,13 +59,21 @@ const options = {
   responsive: true,
 };
 
-function GoogleBarChart({}: GoogleBarChartProps) {
+function GoogleColumnChart({}: GoogleColumnChartProps) {
+  // const [show, setShow] = useState(false);
+  //const [data, setData] = useState(false);
+  /*   useEffect(() => {
+    if (show) {
+      setData(response);
+    }
+  }, [show]); */
+
   return (
-    <div className={style.googleBarChartHeight}>
-      <h2>Horizontal Bar Chart from Google Charts library</h2>
+    <div className={style.googleColumnChartHeight}>
+      <h2>Column Chart from Google Charts library</h2>
       <p>Representing prescriber by drugs</p>
       <Chart
-        chartType="BarChart"
+        chartType="ColumnChart"
         width="100%"
         height="600px"
         data={data}
@@ -75,4 +83,4 @@ function GoogleBarChart({}: GoogleBarChartProps) {
   );
 }
 
-export default GoogleBarChart;
+export default GoogleColumnChart;

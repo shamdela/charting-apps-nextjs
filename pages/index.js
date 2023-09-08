@@ -113,6 +113,11 @@ export default function Home() {
             highlight a selected node when we click it.
           </p>
         </Link>
+
+        <Link href="/google/linechart" className={styles.card}>
+          <h3>Google Charts LineChart &rarr;</h3>
+          <p>A POC for a LineChart chart from the Google Charts library.</p>
+        </Link>
       </div>
     </Layout>
   );
