@@ -3,8 +3,6 @@ import { Chart } from "react-google-charts";
 
 import style from "./styles/GoogleColumnChart.module.scss";
 
-import barChartData from "../../../../barChartData.json";
-
 export interface GoogleColumnChartProps {
   selectedPrescriber: number;
 }
